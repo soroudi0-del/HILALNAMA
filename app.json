@@ -1,0 +1,87 @@
+{
+  "expo": {
+    "name": "هلال‌نما",
+    "slug": "HilalNama",
+    "version": "3.5.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.soroudisoft.hilalnama",
+      "buildNumber": "6",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "برای تعیین مختصات و ارتفاع محل رصد هلال / Used to set your observation location and elevation.",
+        "NSCameraUsageDescription": "برای گرفتن عکس هلال در گزارش رصد / Used to take a photo of the crescent for your report.",
+        "NSPhotoLibraryUsageDescription": "برای انتخاب عکس هلال از گالری / Used to choose a crescent photo from your library.",
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSMotionUsageDescription": "برای راهنمایی جهت و ارتفاع هلال از حسگر حرکت استفاده می‌شود / Motion sensors are used to guide you towards the crescent."
+      }
+    },
+    "android": {
+      "package": "com.soroudisoft.hilalnama",
+      "versionCode": 6,
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.SCHEDULE_EXACT_ALARM",
+        "android.permission.RECEIVE_BOOT_COMPLETED"
+      ],
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.SYSTEM_ALERT_WINDOW"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#151329"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-notifications",
+        {
+          "color": "#D4AF6A",
+          "defaultChannel": "hilal-alerts"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "برای تعیین مختصات و ارتفاع محل رصد هلال / Used to set your observation location and elevation."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "برای انتخاب عکس هلال از گالری / Used to choose a crescent photo from your library.",
+          "cameraPermission": "برای گرفتن عکس هلال در گزارش رصد / Used to take a photo of the crescent for your report.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "برای راهنمایی جهت و ارتفاع هلال از حسگر حرکت استفاده می‌شود / Motion sensors are used to guide you towards the crescent."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "هلال‌نما برای نمایش جای هلال روی تصویر زنده از دوربین استفاده می‌کند. تصویر ذخیره یا ارسال نمی‌شود. / HilalNama uses the camera to show the crescent's position on the live view. Images are never saved or sent.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ]
+    ],
+    "backgroundColor": "#0A0E1A",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0E1A"
+    }
+  }
+}
